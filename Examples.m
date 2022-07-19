@@ -2,7 +2,7 @@
 clear; clf; close all;
 
 % Parameters
-N = 2.5e9; % Normal force applied at origin of half-space [N]
+N = -2.5e9; % Normal force applied at origin of half-space [N]
 G = 35e9; % Shear Modulus [Pa]
 nu = 0.25; % Poissons Ratio
 
@@ -32,11 +32,11 @@ toc
 %% 3D Stresses
 % timed
 tic
-[tau_xx, ~, ~, ~, ~, ~] = Traction_3D_NormalPointLoad(x, y, z, N, nu);
+[tau_xx, ~, tau_zz, ~, ~, ~] = Traction_3D_NormalPointLoad(x, y, z, N, nu);
 toc
 
 % Traction component to display
-traction_component = tau_xx;
+traction_component = tau_zz;
 
 %% Interpolation of Traction Grid
 interp_scale = 1/15;
@@ -69,6 +69,19 @@ ylabel('Y axis','Interpreter','latex')
 zlabel('Z axis','Interpreter','latex')
 title(strcat("Displacements Due to ", num2str(N, '%.1e'), " $N$ Point Force at Origin"), 'Interpreter', 'latex')
 legend('Cannot Figure Out How to Scale', 'Location','southoutside')
+
+figure(5)
+surf(X(:,:,1), Y(:,:,1), u(:,:,1))
+set(gca, 'ZDir', 'reverse')
+colorbar
+colormap jet
+
+xlabel('X axis','Interpreter','latex')
+ylabel('Y axis','Interpreter','latex')
+zlabel('Z axis','Interpreter','latex')
+title(strcat("Displacements Due to ", num2str(N, '%.1e'), " $N$ Point Force at Origin"), 'Interpreter', 'latex')
+legend('Cannot Figure Out How to Scale', 'Location','southoutside')
+
 
 %% What about a Tangenetial Force applied at the origin?
 T = 2.5e9; % Tangential force applied in +x direction [N]

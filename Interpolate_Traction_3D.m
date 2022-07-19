@@ -40,10 +40,6 @@ if length(interpolation_factor) == 1
     interpolation_factor = interpolation_factor*ones(1,3);
 end
 
-disp(length(interpolation_factor))
-disp(length(y))
-disp(interpolation_factor)
-
 x_interp = x(1) : (x(end) - x(1) + 1)/length(x)*interpolation_factor(1) : x(end); % [m]
 y_interp = y(1): (y(end) - y(1) + 1)/length(y)*interpolation_factor(2) : y(end); % [m]
 z_interp = z(1): (z(end) - z(1) + 1)/length(z)*interpolation_factor(3) : z(end); % [m]
