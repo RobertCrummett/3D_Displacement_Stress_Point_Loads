@@ -44,9 +44,9 @@ x_interp = x(1) : (x(end) - x(1) + 1)/length(x)*interpolation_factor(1) : x(end)
 y_interp = y(1): (y(end) - y(1) + 1)/length(y)*interpolation_factor(2) : y(end); % [m]
 z_interp = z(1): (z(end) - z(1) + 1)/length(z)*interpolation_factor(3) : z(end); % [m]
 
-[X, Y, Z] = meshgrid(x, y, z); % 3D mesh grid [m] [m] [m]
-[X_interp, Y_interp, Z_interp] = meshgrid(x_interp,y_interp,z_interp); % 3D mesh grid [m] [m] [m]
+[Y, X, Z] = meshgrid(y, x, z); % 3D mesh grid [m] [m] [m]
+[Y_interp, X_interp, Z_interp] = meshgrid(y_interp,x_interp,z_interp); % 3D mesh grid [m] [m] [m]
 
-traction_interp = interp3(X, Y, Z, traction_component, X_interp, Y_interp, Z_interp, interpolation_method);
+traction_interp = interp3(Y, X, Z, traction_component, Y_interp, X_interp, Z_interp, interpolation_method);
 % [N m^-2]
 end
