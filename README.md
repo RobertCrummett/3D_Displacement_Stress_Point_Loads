@@ -23,6 +23,10 @@ I have undated this repository with the code Traction_3D_NormalLoad(). For a loa
 that can be characerized in terms of [x_min,x_max] and [y_min,y_max], this code will
 integrate the point load solutions to produce a surface traction.
 
+The Examples_3D_Load.m script shows how to implement the functions. Not every kink has
+been worked out in the 3D rake calculation, and in a few other places I am actively
+searching for ways to optimize functions further.
+
 # Sources
 ----------------------------------------------
 The source for this work is:
@@ -30,4 +34,5 @@ The source for this work is:
 Jaeger, J.C., Cook, N.G.W. and Zimmerman, R.W. (2007) Fundamentals of Rock 
 Mechanics. 4th Edition, Chapman and Hall, London. pg. 408-411
 
-Thank you to Dr. Hammond for loaning me the book.
+Thank you to Dr. Hammond for loaning me the book and for the discussions
+about the relevant material.
