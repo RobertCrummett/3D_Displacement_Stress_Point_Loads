@@ -1,7 +1,7 @@
-# Displacements and Stress Due to Point Loads
+# Displacements and Stress Due to Loads
 ----------------------------------------------
 This file contains functions to calculate the displacements and stress in the ground
-as a result of a point force at the origin.
+as a result of a point force at the origin and tractions over arbitrary regions.
 
 ----------------------------------------------
 Functions Displacement_3D_NormalPointLoad() and Displacement_3D_TangentialPointLoad()
@@ -27,6 +27,7 @@ The Examples_3D_Load.m script shows how to implement the functions. Not every ki
 been worked out in the 3D rake calculation, and in a few other places I am actively
 searching for ways to optimize functions further.
 
+---------------------------------------------
 # Sources
 ----------------------------------------------
 The source for this work is:
