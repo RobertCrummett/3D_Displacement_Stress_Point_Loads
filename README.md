@@ -18,6 +18,11 @@ graphics a smoother look.
 
 The script Examples gives an example of how to use the functions and define their inputs.
 
+---------------------------------------------
+I have undated this repository with the code Traction_3D_NormalLoad(). For a load shape
+that can be characerized in terms of [x_min,x_max] and [y_min,y_max], this code will
+integrate the point load solutions to produce a surface traction.
+
 # Sources
 ----------------------------------------------
 The source for this work is:
